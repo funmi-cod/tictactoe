@@ -82,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Positioned(
                 top: 200,
                 right: 60,
-                child: AvatarGlow(
+                child: AvatarGlow(// add grow around the container
                   endRadius: 130,
                   duration: Duration(seconds: 1),
                   glowColor: kTextColor,
@@ -106,6 +106,15 @@ class _SplashScreenState extends State<SplashScreen> {
                 child: Icon(
                   LineAwesomeIcons.circle,
                   size: size.width * 0.10,
+                  color: kOColor,
+                ),
+              ),
+             Positioned(
+                top: 50,
+                right: 60,
+                child: Icon(
+                  LineAwesomeIcons.circle,
+                  size: size.width * 0.08,
                   color: kOColor,
                 ),
               ),
@@ -143,6 +152,33 @@ class _SplashScreenState extends State<SplashScreen> {
                   LineAwesomeIcons.star,
                   size: size.width * 0.05,
                   color: kTextColor,
+                ),
+              ),
+             Positioned(
+                bottom: 10,
+                right: -15,
+                child: Icon(
+                  LineAwesomeIcons.times,
+                  size: size.width * 0.10,
+                  color: kOColor,
+                ),
+              ),
+             Positioned(
+                bottom: -10,
+                right: 80,
+                child: Icon(
+                  LineAwesomeIcons.star,
+                  size: size.width * 0.15,
+                  color: kTextColor,
+                ),
+              ),
+              Positioned(
+                bottom: -10,
+                right: 30,
+                child: Icon(
+                  LineAwesomeIcons.star,
+                  size: size.width * 0.15,
+                  color: kOColor,
                 ),
               ),
             ],
