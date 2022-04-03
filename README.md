@@ -1,16 +1,35 @@
 # tictactoe
 
-A new Flutter project.
+A tic-tac-toe game developed using flutter
 
-## Getting Started
+## Key Features
+- Two player
+- State management using provider
+- Save scores
+- Restart game
 
-This project is a starting point for a Flutter application.
+## Dependencies
+This application uses the following packages:
+ - [google_fonts](https://pub.dev/packages/google_fonts)
+ - [customprompt](https://pub.dev/packages/customprompt)
+ - [device_preview](https://pub.dev/packages/device_preview) 
+ - [line_awesome_flutter](https://pub.dev/packages/line_awesome_flutter)
+ - [google_fonts](https://pub.dev/packages/google_fonts)
+ - [avater_glow](https://pub.dev/packages/avater_glow)
+ - [provider](https://pub.dev/packages/provider)
+  
 
-A few resources to get you started if this is your first Flutter project:
+## How to use
+To clone and run ths application, you'll need to set up [flutter](https://docs.flutter.dev/get-started/install) and [andriod studio](https://developer.android.com/studio).
+From the `IDE`:
+ # Clone this repository
+ $ git@github.com:funmi-cod/tictactoe.git
+ 
+ # Get dependencies
+ run flutter pub get to add the dependencies
+ 
+ # Run the app
+ build the app by clicking `run` or entering `flutter run` in the terminal 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## License
+MIT
