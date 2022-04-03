@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
-
+import 'package:provider/provider.dart';
+import 'package:tictactoe/providers/game_provider.dart';
 import 'package:tictactoe/widget/component/shape.dart';
 
 import '../../constants.dart';
 
-class NextMove extends StatelessWidget {
+class WhoseMove extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
+    final GameProvider state = context.watch<GameProvider>();
     final Size size = MediaQuery.of(context).size;
 
     final style = GoogleFonts.lato(fontSize: state.getAdaptiveTextSize(context, 20), color: kBorderColor,);
@@ -22,7 +22,7 @@ class NextMove extends StatelessWidget {
           "It's",
           style: style,
         ),
-        if (xMove)
+        if (state.xMove)
           Container(
               margin: EdgeInsets.symmetric(horizontal: size.width * 0.0125),
               child: XSign(

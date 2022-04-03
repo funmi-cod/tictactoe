@@ -1,6 +1,7 @@
 import 'dart:async';
+import 'package:tictactoe/providers/game_provider.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import 'package:tictactoe/widget/component/shape.dart';
 
 
@@ -18,7 +19,6 @@ class Field extends StatefulWidget {
 
 class _FieldState extends State<Field> {
   bool disabled = false;
-  bool restart = false;
 
   void handleClick(Function saveChoice, BuildContext context) {
     saveChoice(widget.row, widget.place, context);
@@ -30,13 +30,14 @@ class _FieldState extends State<Field> {
 
   @override
   Widget build(BuildContext context) {
+    final GameProvider state = context.watch<GameProvider>();
     //restart the game
-    if (restart == true) {
+    if (state.restart == true) {
       Future.delayed(Duration.zero, () {
         setState(() {
           disabled = false;
         });
-        handleRestart();
+        state.handleRestart();
       });
     }
 
@@ -47,18 +48,18 @@ class _FieldState extends State<Field> {
         width: widget.size / 4,
         height: widget.size / 3,
         decoration: BoxDecoration(
-          border: determineBorder(widget.row, widget.place),
+          border: state.determineBorder(widget.row, widget.place),
         ),
         child: TextButton(
           onPressed: disabled == true
               ? null
               : () => handleClick(state.saveChoice, context),
           child: disabled == true
-              ? (movesList[widget.row][widget.place] == 'X'
+              ? (state.movesList[widget.row][widget.place] == 'X'
               ? XSign(
             size.height * 0.07,
           )
-              : movesList[widget.row][widget.place] == 'O'
+              : state.movesList[widget.row][widget.place] == 'O'
               ? Circle(
             size.height * 0.07,
           )

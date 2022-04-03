@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tictactoee/widget/game_page/game_page_widgets.dart';
+import 'package:tictactoe/widget/game_page/game_page_widgets.dart';
 
 class Game extends StatelessWidget {
   @override
