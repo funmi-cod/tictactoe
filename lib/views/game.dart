@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tictactoe/widget/game_page/game_page_widgets.dart';
 
+
 class Game extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,11 +15,11 @@ class Game extends StatelessWidget {
             // Score Board widget
             Padding(
               padding:  EdgeInsets.only(top: size.height*0.04,),
-              child: Results(),
+              child: Scores(),
             ),
             Column(
               children: [
-                WhoseMove(),
+                NextMove(),
                 Board(),
               ],
             ),

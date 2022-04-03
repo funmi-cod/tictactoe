@@ -7,7 +7,7 @@ import 'package:tictactoe/widget/component/shape.dart';
 
 import '../../constants.dart';
 
-class WhoseMove extends StatelessWidget {
+class NextMove extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final GameProvider state = context.watch<GameProvider>();
