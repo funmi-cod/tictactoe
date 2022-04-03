@@ -23,7 +23,7 @@ class Button extends StatelessWidget {
       child: TextButton(
         onPressed: () => Navigator.pushNamed(context, '/game'),
         style: TextButton.styleFrom(
-          shape: text != 'settings'
+          shape: text != 'Rules'
               ? RoundedRectangleBorder(
             side: BorderSide(
               color: color!,

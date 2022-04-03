@@ -47,7 +47,7 @@ class Home extends StatelessWidget {
                     ],
                   ),
                   ButtonsWrapper(),// game button
-                  const Button('settings',),
+                  const Button('Rules',),
                 ],
               ),
             ],

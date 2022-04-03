@@ -7,7 +7,7 @@ class Board extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
 
-    final double boardSize = size.width * 0.40;
+    final double boardSize = size.width * 0.50;
 
     return Container(
       padding: EdgeInsets.symmetric(horizontal: size.width * 0.02),

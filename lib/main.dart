@@ -13,9 +13,9 @@ import 'package:tictactoe/views/game.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
+    ChangeNotifierProvider( // to listen to changes in the app
         create: (context) => GameProvider(),
-        child: DevicePreview(
+        child: DevicePreview( // To preview our app on different mobile device
           enabled: !kReleaseMode,
           builder: (context) => TicTacToe(),
         )),
