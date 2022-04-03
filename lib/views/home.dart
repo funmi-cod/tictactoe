@@ -1,12 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tictactoe/widget/component/shape.dart';
 
 import '../constants.dart';
+import '../widget/home_page/home_page_widget.dart';
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    // screen size
     final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -43,6 +46,8 @@ class Home extends StatelessWidget {
                       XSign(size.width * 0.15),
                     ],
                   ),
+                  ButtonsWrapper(),// game button
+                  const Button('settings',),
                 ],
               ),
             ],
